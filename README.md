@@ -1,261 +1,347 @@
 ```markdown
 <div align="center">
   
-  <img src="https://img.icons8.com/fluency/96/restaurant-table.png" alt="Logo" width="80"/>
+  <img src="https://img.icons8.com/color/96/000000/restaurant.png" alt="Logo" width="80"/>
   
-  # 🍽️ Campus Dang Food
-
-  **Plateforme de Restauration Connectée – Yaoundé, Cameroun**
-
-  [![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://adoptium.net/)
-  [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-  [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-  [![Thymeleaf](https://img.shields.io/badge/Thymeleaf-3.1.2-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white)](https://www.thymeleaf.org/)
+  #  Campus Dang Food
+  
+  ### *Plateforme de Restauration & Réservation – Cœur du Cameroun*
+  
+  [![Java](https://img.shields.io/badge/Java-17-007396?style=for-the-badge&logo=java)](https://adoptium.net/)
+  [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-6DB33F?style=for-the-badge&logo=springboot)](https://spring.io/projects/spring-boot)
+  [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql)](https://mysql.com)
+  [![Thymeleaf](https://img.shields.io/badge/Thymeleaf-3.1-005F0F?style=for-the-badge&logo=thymeleaf)](https://www.thymeleaf.org/)
   [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
   
-  *Une solution tout-en-un pour la gestion des restaurants, menus, commandes et réservations*
-
-  [Démo en ligne](#-démo-et-captures) • [Documentation](#-structure-du-projet) • [Guide d'installation](#-installation-et-exécution)
-
+  > *Une expérience gastronomique haut de gamme alliant tradition camerounaise et innovation technologique.*
+  
+  [🚀 Démo en ligne](#) · [📖 Documentation](#) · [🐛 Signaler un bug](#) · [✨ Suggérer une idée](#)
+  
 </div>
 
 ---
 
-## 📖 Présentation Générale
+## 📋 Table des matières
 
-**Campus Dang Food** est une application web complète développée dans le cadre d’un projet académique. Elle permet aux étudiants, professeurs et personnels du campus de découvrir l’offre gastronomique, de consulter les menus du jour, de réserver une table et de passer des commandes en ligne.
-
-L’application se distingue par son **design raffiné** (dark mode, animations fluides, interface premium) et sa **robustesse technique** (Spring Boot, sécurité intégrée, architecture MVC).
-
----
-
-## ✨ Fonctionnalités Clés
-
-### 👥 Côté Public / Client
-- 🏠 **Accueil dynamique** : Présentation des restaurants, statistiques, effets visuels (particules, orbes flottants)
-- 🍽️ **Liste des restaurants** : Filtrage par type (Grillade, Restaurant, Bar) et notation par étoiles
-- 📋 **Menus du jour** : Affichage par catégorie (Petit-déjeuner, Déjeuner, Dîner) avec détails des plats
-- 🛒 **Panier de commande** : Ajout/suppression de plats, calcul automatique du total
-- 💳 **Paiement simulé** : Interface claire avec choix MTN Mobile Money, Orange Money ou carte bancaire
-- 🎫 **Génération de reçu** : Impression ou téléchargement PDF après commande
-- 📅 **Réservation de table** : Sélection du restaurant, du créneau horaire, de la table et saisie coordonnées client
-
-### 👨‍🍳 Côté Administration (Chef / Serveur)
-- 🔐 **Authentification sécurisée** : Rôles `CHEF` et `SERVEUR` avec mots de passe encodés (BCrypt)
-- 📊 **Dashboard** : Vue d’ensemble des restaurants et accès rapide à la gestion
-- ➕ **Création de menus** : Ajout de menus (type, date) pour chaque restaurant
-- 🍲 **Ajout de plats** : Nom, description, prix, catégorie (entrée, plat principal, dessert, boisson)
-- 🔄 **Mise à jour en temps réel** : Les modifications apparaissent immédiatement sur le front-office
-
-### 💾 Stockage et Données
-- 🗄️ **Base MySQL** : Tables `restaurants`, `menus`, `plats_menu`, `utilisateurs`, `clients`
-- 📦 **Persistance locale** : Les commandes, réservations et statistiques sont sauvegardées dans `localStorage` (démonstration)
-- 🧹 **Initialisation automatique** : Chargement de données de démonstration via `CommandLineRunner`
+1. [Aperçu du projet](#-aperçu-du-projet)
+2.  [Fonctionnalités principales](#-fonctionnalités-principales)
+3.  [Stack technique](#-stack-technique)
+4.  [Architecture & Structure](#-architecture--structure)
+5.  [Installation & Configuration](#-installation--configuration)
+6.  [Variables d'environnement](#-variables-denvironnement)
+7.  [Démarrage rapide](#-démarrage-rapide)
+8.  [Comptes par défaut](#-comptes-par-défaut)
+9.  [API & Endpoints clés](#-api--endpoints-clés)
+10. [Captures d'écran](#-captures-décran)
+11. [Feuille de route](#-feuille-de-route)
+12. [Contribution](#-contribution)
+13. [Licence](#-licence)
 
 ---
 
-## 🧱 Architecture Technique
+## 🚀 Aperçu du projet
 
-Le projet suit une architecture **MVC (Modèle-Vue-Contrôleur)** classique de Spring Boot.
+**Campus Dang Food** est une application web complète de gestion de restauration destinée aux établissements situés autour du campus universitaire. Elle permet aux clients de :
 
-```mermaid
-graph LR
-    A[Client Web] --> B(Thymeleaf Templates)
-    B --> C{Spring Controller}
-    C --> D[Service Layer]
-    D --> E[Repository Layer]
-    E --> F[(MySQL Database)]
-    C --> B
+- Parcourir les restaurants (Grillade, Bar Lounge, Gastronomique).
+- Consulter les menus du jour (Petit-déjeuner, Déjeuner, Dîner).
+- Passer des commandes en ligne avec paiement sécurisé (simulation).
+- Réserver des tables via un système interactif de choix de tables.
+- Gérer l’administration des menus et plats (rôles CHEF / SERVEUR).
+
+L’application allie un **back-end robuste** (Spring Boot, Security, JPA) et un **front-end moderne** (Thymeleaf, animations CSS, interface responsive).
+
+---
+
+## ✨ Fonctionnalités principales
+
+### Côté Client 👤
+
+| Module | Description |
+|--------|-------------|
+| 🏠 **Accueil dynamique** | Présentation des restaurants, statistiques, animations particules. |
+| 🍽️ **Exploration restaurants** | Filtrage par type (grillade, bar, restaurant). |
+| 📋 **Menus détaillés** | Affichage des plats par catégorie (traditionnel, moderne, dessert, boisson). |
+| 🛒 **Panier & commande** | Ajout/suppression, calcul automatique, validation de commande. |
+| 💳 **Paiement simulé** | MTN Mobile Money, Orange Money, VISA (mode démo). |
+| 📅 **Réservation tables** | Sélection restaurant → formulaire → choix table en temps réel. |
+| 📄 **Reçu PDF** | Génération d’un ticket de réservation / commande imprimable. |
+
+### Côté Administration 🔐
+
+| Rôle | Accès |
+|------|-------|
+| **CHEF** | Gestion complète des menus, création/suppression de plats, dashboard. |
+| **SERVEUR** | Consultation des commandes, mise à jour statut (via console). |
+| **Sécurité** | Spring Security, mots de passe BCrypt, sessions personnalisées. |
+
+### Fonctionnalités transverses 🌐
+
+- Design **dark mode premium** (effets or, particules flottantes, animations).
+- **100% responsive** (mobile, tablette, desktop).
+- Stockage local des commandes et statistiques (LocalStorage).
+- Filtrage en temps réel des plats par catégorie.
+- Notification toast pour les actions utilisateur.
+
+---
+
+## 🧰 Stack technique
+
+### Backend
+| Technologie | Version | Rôle |
+|-------------|---------|------|
+| Java JDK | 17 | Langage principal |
+| Spring Boot | 3.2.0 | Framework MVC & IoC |
+| Spring Security | 6.x | Authentification, autorisations |
+| Spring Data JPA | 3.x | ORM, repositories |
+| MySQL Connector | 8.x | Driver base de données |
+| H2 Database | (runtime) | Tests & développement rapide |
+| Maven | 3.9+ | Gestionnaire de dépendances |
+
+### Frontend
+| Technologie | Usage |
+|-------------|-------|
+| Thymeleaf 3.1 | Templates HTML dynamiques |
+| HTML5 / CSS3 | Structure & animations personnalisées |
+| JavaScript (ES6) | Panier, filtres, modales, LocalStorage |
+| html2pdf.js | Génération de reçus PDF |
+| Font Awesome 6 | Icônes vectorielles |
+| Google Fonts | Playfair Display + Inter |
+
+### Outils & Bonnes pratiques
+- **Lombok** → Réduction boilerplate code.
+- **DevTools** → Rechargement automatique.
+- **Validation** → `@NotNull`, `@Email`, etc.
+- **JUnit 5** → Tests unitaires.
+- **Maven Wrapper** → Build sans installation préalable.
+
+---
+
+## 🏗 Architecture & Structure
+
+```
+com.campusdang.restauration
+├── config
+│   ├── DataInitializer.java       # Charge les données de démo
+│   ├── SecurityConfig.java        # Configuration Spring Security
+│   └── CustomUserDetailsService.java
+├── controller
+│   ├── AccueilController.java
+│   ├── AdminController.java       # Gestion menus/plats
+│   ├── LoginController.java
+│   ├── ReservationController.java
+│   └── RestaurantController.java
+├── model
+│   ├── Client.java
+│   ├── Menu.java
+│   ├── PlatMenu.java
+│   ├── Restaurant.java
+│   ├── Utilisateur.java
+│   └── enums (Role, TypeMenu, TypeService, Statut*)
+├── repository
+│   ├── ClientRepository.java
+│   ├── MenuRepository.java
+│   ├── PlatMenuRepository.java
+│   ├── RestaurantRepository.java
+│   └── UtilisateurRepository.java
+└── service
+    ├── ClientService.java
+    ├── MenuService.java
+    ├── PlatMenuService.java
+    ├── RestaurantService.java
+    └── CustomUserDetailsService.java
+
+src/main/resources
+├── application-mysql.properties   # Configuration DB
+├── static/ (css, js)
+└── templates/
+    ├── accueil/index.html
+    ├── restaurants/liste.html
+    ├── restaurants/detail.html
+    ├── restaurants/menu.html
+    ├── reservations/nouvelle.html
+    ├── admin/dashboard.html
+    ├── admin/menus.html
+    ├── admin/nouveauMenu.html
+    ├── admin/nouveauPlat.html
+    ├── login.html
+    └── contact.html
 ```
 
-### Détail des couches :
-
-| Couche          | Technologie / Rôle                                                                 |
-|-----------------|------------------------------------------------------------------------------------|
-| **Front-end**   | HTML5 / CSS3 (design custom), Thymeleaf, JavaScript (interactions, panier, localStorage) |
-| **Contrôleurs** | `AccueilController`, `RestaurantController`, `AdminController`, `ReservationController`, `LoginController` |
-| **Service**     | `RestaurantService`, `MenuService`, `PlatMenuService`, `ClientService`, `CustomUserDetailsService` |
-| **Repository**  | JPA / Hibernate avec interfaces `CrudRepository`                                  |
-| **Sécurité**    | Spring Security (form login, BCrypt, rôle-based access)                           |
-| **Base de données** | MySQL Community Server 8.0                                                      |
-| **Build**       | Maven                                                                             |
-
 ---
 
-## 📁 Structure du Projet
-
-```
-src/
-├── main/
-│   ├── java/com/campusdang/restauration/
-│   │   ├── config/               # SecurityConfig, DataInitializer
-│   │   ├── controller/           # Accueil, Restaurant, Admin, Login, Reservation
-│   │   ├── model/                # Restaurant, Menu, PlatMenu, Client, Utilisateur, enums
-│   │   ├── repository/           # Interfaces JPA
-│   │   └── service/              # Logique métier + CustomUserDetailsService
-│   └── resources/
-│       ├── application-mysql.properties
-│       ├── templates/
-│       │   ├── accueil/
-│       │   ├── admin/
-│       │   ├── restaurants/
-│       │   ├── reservations/
-│       │   ├── login.html
-│       │   └── contact.html
-│       └── static/               # (assets CSS/JS si nécessaire)
-└── test/                         # Tests unitaires (optionnel)
-```
-
----
-
-## 💻 Installation et Exécution
+## ⚙️ Installation & Configuration
 
 ### Prérequis
 
-- **JDK 17** ou supérieur ([télécharger](https://adoptium.net/))
-- **MySQL Community Server** ([télécharger](https://dev.mysql.com/downloads/mysql/))
-- **Maven** (intégré dans les IDE comme IntelliJ ou VS Code)
-- Navigateur web moderne (Chrome, Firefox, Edge)
+- **JDK 17** ou supérieur
+- **MySQL Server 8.0** (ou H2 pour test rapide)
+- **Maven 3.9+** (ou utilisation du wrapper inclus)
+- **Git** (optionnel)
 
-### Étapes d’installation
+### 1. Cloner le dépôt
 
-1. **Cloner le dépôt**
-   ```bash
-   git clone https://github.com/votre-username/campus-dang-food.git
-   cd campus-dang-food
-   ```
+```bash
+git clone https://github.com/votre-username/campus-dang-food.git
+cd campus-dang-food
+```
 
-2. **Créer la base de données MySQL**
-   ```sql
-   CREATE DATABASE campusdangdb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-   ```
+### 2. Configurer la base de données
 
-3. **Configurer l’accès MySQL**  
-   Éditez le fichier `src/main/resources/application-mysql.properties` :
-   ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/campusdangdb?useSSL=false&serverTimezone=UTC
-   spring.datasource.username=votre_utilisateur
-   spring.datasource.password=votre_mot_de_passe
-   ```
+Créez une base MySQL (par ex. `campusdangdb`) :
 
-4. **Lancer l’application**
-   ```bash
-   ./mvnw spring-boot:run
-   ```
-   *(Sous Windows : `mvnw.cmd spring-boot:run`)*
+```sql
+CREATE DATABASE campusdangdb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
 
-5. **Accéder à l’application**  
-   Ouvrez votre navigateur à l’adresse : [http://localhost:8080](http://localhost:8080)
+Modifiez `src/main/resources/application-mysql.properties` :
 
-### 🔐 Comptes par défaut (administration)
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/campusdangdb?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=VotreMotDePasse
+```
 
-| Rôle       | Email                    | Mot de passe |
-|------------|--------------------------|--------------|
-| Chef       | `chef@campusdang.cm`     | `chef123`    |
-| Serveur    | `serveur@campusdang.cm`  | `serveur123` |
+> 💡 Pour un test rapide sans MySQL, remplacez par `spring.profiles.active=h2` et décommentez la dépendance H2.
 
-> ℹ️ Les mots de passe sont encodés avec BCrypt. Le client `jean@email.com` (mdp `123456`) est également créé.
+### 3. Lancer l’application
 
----
+Avec Maven Wrapper :
 
-## 📸 Démo et Captures
+```bash
+./mvnw spring-boot:run
+```
 
-### Page d’accueil
-![Accueil](https://via.placeholder.com/800x400?text=Capture+Accueil+Campus+Dang)
+Ou avec Maven global :
 
-*Fond animé, badges dorés, boutons d’appel à l’action.*
+```bash
+mvn clean install
+mvn spring-boot:run
+```
 
-### Liste des restaurants
-![Restaurants](https://via.placeholder.com/800x400?text=Liste+Restaurants)
-
-*Filtres par type, notes, horaires et spécialités.*
-
-### Menu détaillé et panier
-![Menu et panier](https://via.placeholder.com/800x400?text=Menu+Du+Jour+et+Panier)
-
-*Ajout de plats, ajustement des quantités, paiement intégré.*
-
-### Interface d’administration
-![Dashboard admin](https://via.placeholder.com/800x400?text=Dashboard+Admin)
-
-*Gestion des menus et des plats.*
+L’application est accessible sur : [http://localhost:8080](http://localhost:8080)
 
 ---
 
-## ⚙️ Technologies Utilisées (Détail)
+## 🔐 Variables d’environnement (sécurité)
 
-| Catégorie          | Technologie(s)                                                                                 |
-|--------------------|------------------------------------------------------------------------------------------------|
-| Backend            | Java 17, Spring Boot 3.2, Spring MVC, Spring Data JPA, Spring Security                        |
-| Frontend           | Thymeleaf, HTML5, CSS3 (Flexbox, Grid, animations), JavaScript (ES6)                          |
-| Base de données    | MySQL, Hibernate                                                                              |
-| Build & Dépendances| Maven, `pom.xml` avec spring-boot-starter-*, mysql-connector-java, thymeleaf-extras-springsecurity6 |
-| UI/UX              | Police Google Fonts (Inter, Playfair Display), Font Awesome 6, design sombre/luxueux          |
-| Outils de dev      | IntelliJ IDEA, Git, MySQL Workbench                                                           |
+Pour une production, externalisez ces secrets :
 
----
+```bash
+export DB_USERNAME=prod_user
+export DB_PASSWORD=SecurePass123
+export JWT_SECRET=votre_secret_jwt
+```
 
-## 🌟 Points Forts du Projet
+Dans `application.properties` :
 
-- ✅ **Sécurité** : Gestion de sessions, protection CSRF (désactivée pour H2 mais activable), rôles `CHEF` / `SERVEUR`
-- ✅ **Responsive Design** : Adapté aux écrans de bureau, tablettes et mobiles
-- ✅ **Expérience utilisateur** : Animations CSS (`hover`, `keyframes`), messages toast, transitions fluides
-- ✅ **Code modulaire** : Séparation claire des responsabilités (contrôleurs, services, repositories)
-- ✅ **Simulation de paiement** : Pas de vrai traitement bancaire mais expérience réaliste (reçu PDF)
-- ✅ **Documentation complète** : Ce README, commentaires Java (entités), nommage clair
+```properties
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+```
 
 ---
 
-## 🚀 Améliorations Futures (Roadmap)
+## 🚀 Démarrage rapide
 
-- [ ] Ajout d’une API REST pour exposer les données (consommable par une app mobile)
-- [ ] Intégration d’un vrai gateway de paiement (Stripe, Orange Money API)
-- [ ] Panneau d’administration avancé avec graphiques (Chart.js) sur les ventes
-- [ ] Envoi d’emails de confirmation (Spring Mail)
-- [ ] Tests unitaires et d’intégration (JUnit, MockMvc)
-- [ ] Déploiement sur un cloud (AWS, Heroku, ou render.com)
+| Action | URL |
+|--------|-----|
+| Accueil public | [http://localhost:8080](http://localhost:8080) |
+| Liste des restaurants | [http://localhost:8080/restaurants](http://localhost:8080/restaurants) |
+| Réservation table | [http://localhost:8080/reservations/nouvelle](http://localhost:8080/reservations/nouvelle) |
+| Administration | [http://localhost:8080/admin](http://localhost:8080/admin) |
+| Connexion admin | [http://localhost:8080/login](http://localhost:8080/login) |
+
+---
+
+## 👥 Comptes par défaut (initialisés automatiquement)
+
+| Email | Mot de passe | Rôle |
+|-------|--------------|------|
+| `chef@campusdang.cm` | `chef123` | 🧑‍🍳 CHEF |
+| `serveur@campusdang.cm` | `serveur123` | 🍽️ SERVEUR |
+| `jean@email.com` | `123456` | 👤 CLIENT (démonstration) |
+
+> ⚠️ En production, modifiez immédiatement ces identifiants.
+
+---
+
+## 🌐 API & Endpoints clés
+
+### Endpoints publics
+
+```http
+GET  /                           # Page d'accueil
+GET  /restaurants                # Liste restaurants
+GET  /restaurants/{id}           # Détail restaurant
+GET  /restaurants/{id}/menu/{type}  # Menu spécifique
+GET  /reservations/nouvelle      # Formulaire réservation
+POST /reservations               # (prévu) Sauvegarde réservation
+```
+
+### Endpoints protégés (ADMIN / CHEF / SERVEUR)
+
+```http
+GET    /admin                    # Dashboard
+GET    /admin/menus/{restoId}    # Menus du restaurant
+POST   /admin/menus/sauvegarder  # Créer menu
+GET    /admin/plats/nouveau/{menuId}
+POST   /admin/plats/sauvegarder  # Ajouter plat
+```
+
+---
+
+## 📸 Captures d’écran
+
+> *(À venir – vous pouvez ajouter ici des images via `![alt](url)`)*
+
+| Accueil | Détail restaurant | Panier commande |
+|---------|------------------|------------------|
+| ![](https://via.placeholder.com/400x200?text=Home+Page) | ![](https://via.placeholder.com/400x200?text=Restaurant) | ![](https://via.placeholder.com/400x200?text=Cart) |
+
+---
+
+## 🗺 Feuille de route
+
+- [x] Authentification Spring Security
+- [x] CRUD restaurants / menus / plats
+- [x] Panier et commande locale (LocalStorage)
+- [x] Réservation de tables avec validation places
+- [ ] Paiement réel (Stripe / Orange Money API)
+- [ ] Back-office commandes (statuts EN_ATTENTE, LIVRÉE)
+- [ ] Export Excel des ventes
+- [ ] Dashboard analytics (chiffre d’affaires, plats populaires)
 
 ---
 
 ## 🤝 Contribution
 
-Ce projet a été réalisé dans un cadre pédagogique. Les contributions sont les bienvenues pour l’enrichir :
+Les contributions sont les bienvenues !  
+Suivez ces étapes :
 
-1. Forkez le projet
-2. Créez votre branche (`git checkout -b feature/amazing-feature`)
-3. Committez (`git commit -m 'Add some amazing feature'`)
-4. Pushez (`git push origin feature/amazing-feature`)
-5. Ouvrez une *Pull Request*
+1. **Fork** le projet.
+2. Créez votre branche (`git checkout -b feature/amazing-feature`).
+3. **Commit** vos changements (`git commit -m 'Add some amazing feature'`).
+4. **Push** (`git push origin feature/amazing-feature`).
+5. Ouvrez une **Pull Request**.
+
+Merci de respecter les conventions de code et d’ajouter des tests si nécessaire.
 
 ---
 
 ## 📄 Licence
 
-Distribué sous licence MIT. Voir le fichier `LICENSE` pour plus d’informations.
-
----
-
-## 👨‍💻 Auteur
-
-**Votre Nom** – [@votre-pseudo](https://github.com/votre-pseudo)  
-Projet réalisé pour le cours de **Développement d’applications web avec Spring Boot** – Année académique 2025/2026.
+Distribué sous la licence **MIT**. Voir le fichier `LICENSE` pour plus d’informations.
 
 ---
 
 <div align="center">
-  <sub>❤️ Développé avec passion pour la gastronomie camerounaise et les technologies modernes.</sub>
+  
+  **Développé avec ☕ et 🍽️ par l’équipe Campus Dang**  
+  
+  [📧 Email](mailto:contact@campusdang.cm) · [🌐 Site web](https://campusdang.cm) · [🐦 Twitter](https://twitter.com/campusdang)
+  
 </div>
 ```
 
 ---
-
-### 📌 Conseils pour personnaliser ce README :
-
-1. **Remplacez** les `via.placeholder.com` par de *véritables captures d’écran* de votre application.  
-   Vous pouvez utiliser un outil comme [CleanShot](https://cleanshot.com/) ou simplement `Win + Shift + S` (Windows) puis héberger les images dans un dossier `screenshots/` et y faire référence.
-
-2. **Ajoutez un vrai logo** si vous en avez un, ou utilisez celui fourni (icône Font Awesome).
-
-3. **Modifiez le nom de l’auteur et le lien GitHub** dans la section "Auteur".
-
-4. **Testez les liens** : assurez-vous que `LICENSE` existe ou créez un fichier `LICENSE` avec le texte MIT.
