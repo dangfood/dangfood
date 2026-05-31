@@ -1,4 +1,3 @@
-```markdown
 <div align="center">
 
 # Campus Dang Food
@@ -346,4 +345,3 @@ Distributed under the **MIT** license. See the [`LICENSE`](LICENSE) file for mor
 [📧 contact@campusdang.cm](mailto:contact@campusdang.cm) · [🌐 campusdang.cm](https://campusdang.cm)
 
 </div>
-```
