@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion • Campus Dang Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0a0a0a; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .login-box { background: #141414; padding: 40px; border-radius: 16px; border: 1px solid rgba(212, 175, 55, 0.3); width: 400px; max-width: 90%; }
+        .login-box h1 { text-align: center; font-family: 'Playfair Display', serif; margin-bottom: 30px; }
+        .login-box h1 span { color: #d4af37; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; color: rgba(255,255,255,0.7); }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #1a1a1a; color: white; }
+        .form-group input:focus { border-color: #d4af37; outline: none; }
+        .btn { width: 100%; padding: 12px; background: #d4af37; color: #0a0a0a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #b8962c; }
+        .error { background: rgba(239, 68, 68, 0.2); color: #ef4444; padding: 10px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .logo { text-align: center; font-size: 2rem; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">🍽️</div>
+        <h1>Campus Dang <span>Food</span></h1>
+        
+        <div th:if="${param.error}" class="error">
+            <i class="fas fa-exclamation-circle"></i> Email ou mot de passe incorrect
+        </div>
+        
+        <div th:if="${param.logout}" class="error" style="background: rgba(34, 197, 94, 0.2); color: #22c55e;">
+            <i class="fas fa-check-circle"></i> Vous avez été déconnecté
+        </div>
+        
+        <form th:action="@{/login}" method="post">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" id="username" name="username" placeholder="chef@campusdang.cm" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+        
+        <p style="text-align: center; margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.8rem;">
+            Comptes de test : chef@campusdang.cm / chef123<br>
+            serveur@campusdang.cm / serveur123
+        </p>
+    </div>
+</body>
+</html>
