@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titre}">Menus • Administration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0fdf4; }
+        .header { background: linear-gradient(135deg, #0a0a0a, #1a1a1a); color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+        .header h1 { font-size: 1.5rem; }
+        .header a { color: #d4af37; text-decoration: none; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .menu-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .menu-card h3 { color: #1a1a1a; }
+        .btn { padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; }
+        .btn-gold { background: #d4af37; color: white; }
+        .btn-gold:hover { background: #b8962c; }
+        .btn-green { background: #22c55e; color: white; }
+        .btn-green:hover { background: #16a34a; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 th:text="${titre}">Menus</h1>
+        <a href="/admin">← Retour au dashboard</a>
+    </div>
+    
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <a th:href="@{/admin/menus/nouveau/{id}(id=${restaurant.id})}" class="btn btn-green">
+                <i class="fas fa-plus"></i> Nouveau menu
+            </a>
+        </div>
+        
+        <div th:each="menu : ${menus}" class="menu-card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <h3 th:text="${menu.type.libelle}">Type</h3>
+                    <p style="color:#666;">Date : <span th:text="${menu.date}">Date</span></p>
+                    <p style="color:#666;">Statut : 
+                        <span th:if="${menu.disponible}" style="color:#22c55e;">✅ Disponible</span>
+                        <span th:if="${!menu.disponible}" style="color:#ef4444;">❌ Indisponible</span>
+                    </p>
+                </div>
+                <div>
+                    <a th:href="@{/admin/plats/nouveau/{id}(id=${menu.id})}" class="btn btn-gold">
+                        <i class="fas fa-plus"></i> Ajouter un plat
+                    </a>
+                </div>
+            </div>
+            <div style="margin-top:15px; border-top:1px solid #eee; padding-top:15px;">
+                <h4>Plats :</h4>
+                <ul>
+                    <li th:each="plat : ${menu.plats}" th:text="${plat.nom} + ' - ' + ${plat.prix} + ' FCFA'">Plat</li>
+                    <li th:if="${menu.plats.isEmpty()}" style="color:#999;">Aucun plat</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
