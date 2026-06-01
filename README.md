@@ -1,378 +1,169 @@
-# ✦ ＣＡＭＰＵＳ ＤＡＮＧ ＦＯＯＤ ✦
+C'est une demande exceptionnelle. Pour atteindre un niveau **"Ultra Futuriste / Jamais Réalisé"**, nous devons abandonner l'idée d'un simple document texte. Nous allons transformer votre fichier `README.md` en une **Interface Homme-Machine (HUD) d'inspiration Cyberpunk**.
 
+L'astuce consiste à utiliser les caractères de dessin de boîtes Unicode (`┌`, `├`, `│`), des blocs de remplissage (`█`, `▓`, `▒`), et le formatage de code (`yaml`, `bash`) pour tromper le moteur Markdown et créer l'illusion d'un terminal holographique actif, directement sur GitHub.
+
+Voici l'architecture **NEXUS** de votre projet. Copiez ce code brut :
+
+```markdown
 <div align="center">
 
-<br>
-<br>
-<br>
+```text
+▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 
 ```
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                  ║
-║                                                                                                                  ║
-║                                        ██████╗██████╗ ███████╗                                                   ║
-║                                        ██╔════╝██╔══██╗██╔════╝                                                   ║
-║                                        ██║     ██████╔╝█████╗                                                     ║
-║                                        ██║     ██╔══██╗██╔══╝                                                     ║
-║                                        ╚██████╗██║  ██║██║                                                        ║
-║                                         ╚═════╝╚═╝  ╚═╝╚═╝                                                        ║
-║                                                                                                                  ║
-║                                                                                                                  ║
-║                                          ＰＬＡＴＦＯＲＭＥ                                                          ║
-║                                      ＧＥＳＴＩＯＮ ＧＡＳＴＲＯＮＯＭＩＱＵＥ                                            ║
-║                                                                                                                  ║
-║                                                                                                                  ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-```
 
-<br>
-<br>
+```text
+          █▀▀ ▄▀█ █▀▄▀█ █▀█ █░█ █▀
+          █▄▄ █▀█ █░▀░█ █▀▀ █▄█ ▄█
+ 
+ █▀▄ ▄▀█ █▄░█ █▀▀   █▀▀ █▀█ █▀█ █▀▄   █▄░█ █▀▀ ▀▄▀ █░█ █▀
+ █▄▀ █▀█ █░▀█ █▄█   █▀░ █▄█ █▄█ █▄▀   █░▀█ ██▄ █░█ █▄█ ▄█
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                                                                                 │
-│                                      L'INFINI TECHNOLOGIQUE AU SERVICE                                          │
-│                                          DE L'EXCELLENCE CULINAIRE                                               │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
-<br>
+`SYS.LOC: NGAOUNDÉRÉ [7.4222° N, 13.5562° E]` ⟡ `NET.STAT: O N L I N E` ⟡ `VER: 3.2.0.X`
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  [01] SYS.MODS  ⟡  [02] CORE.TECH  ⟡  [03] BOOT.SEQ  ⟡  [04] NET.ROUTES      │
+└──────────────────────────────────────────────────────────────────────────────┘
 
 ```
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-```
 
-<br>
-
-**[ FONCTIONNALITÉS ]** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **[ ARCHITECTURE ]** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **[ DÉPLOIEMENT ]** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **[ API ]** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **[ ROADMAP ]**
-
-<br>
-
-```
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-```
-
-</div>
-
-<br>
-<br>
-<br>
-
-## ◈ ＣＯＲＥ ＳＹＳＴＥＭ
-
-<br>
+```yaml
+>_ INITIALIZING_TELEMETRY_LOG...
+[OK] OVERRIDE ACCEPTED.
+[OK] GASTRONOMIC MANAGEMENT PROTOCOL ENGAGED.
+[i]  SYNOPSIS : Plateforme neuronale de gestion pour les établissements du 
+                campus universitaire de Dang. Découverte, transaction, 
+                et réservation en temps réel.
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                                                                                 │
-│  ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════╗  │
-│  ║                                                                                                           ║  │
-│  ║   Une infrastructure distribuée pour orchestrer l'écosystème gastronomique du campus universitaire de    ║  │
-│  ║   Dang (Ngaoundéré, Cameroun). Cette plateforme fusionne découverte, transaction et gouvernance dans     ║  │
-│  ║   un espace unifié, sécurisé par une architecture zero-trust.                                            ║  │
-│  ║                                                                                                           ║  │
-│  ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════╝  │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
+### ⬡ `[01] SYS.MODS` // ARCHITECTURE CLIENT-SERVEUR
 
----
-
-## ◈ ＭＯＤＵＬＥＳ
-
-<br>
+```text
+├─ CLIENT_INTERFACE (USR.ENV)
+│  ├─ EXPLORATION  : Matrice de filtrage dynamique & cartes asynchrones
+│  ├─ CART_NEXUS   : Stockage local, calcul auto-adaptatif, validation
+│  ├─ PAY.SIMUL    : Passerelles MMo, Orange Money, Interface VISA
+│  └─ RESERVATION  : Allocation spatiale en temps réel & export PDF (.html2pdf)
+│
+└─ ADMIN_INTERFACE (ROOT.ENV)
+   ├─ ROLE_CHEF    : Opérations CRUD complètes, métriques de bord
+   └─ ROLE_SERVEUR : Monitoring des flux de commandes, mutation de statut
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                    FRONTEND                                                     │
-├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                                                 │
-│   ┌─────────────────────────┐   ┌─────────────────────────┐   ┌─────────────────────────┐   ┌─────────────────┐  │
-│   │                         │   │                         │   │                         │   │                 │  │
-│   │      DISCOVERY          │   │        CART             │   │      PAYMENT            │   │    BOOKING      │  │
-│   │                         │   │                         │   │                         │   │                 │  │
-│   │  • Search indexing      │   │  • Atomic updates       │   │  • MTN Mobile Money     │   │  • Real-time    │  │
-│   │  • Dynamic filtering    │   │  • Total calculation    │   │  • Orange Money         │   │  • Availability │  │
-│   │  • Semantic taxonomy    │   │  • Persistent storage   │   │  • VISA/Mastercard      │   │  • QR tickets   │  │
-│   │  • Recommendations      │   │  • Checkout flow        │   │  • Secure simulation    │   │  • PDF export   │  │
-│   │                         │   │                         │   │                         │   │                 │  │
-│   └─────────────────────────┘   └─────────────────────────┘   └─────────────────────────┘   └─────────────────┘  │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
+### ⬡ `[02] CORE.TECH` // EMPREINTE TECHNOLOGIQUE
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                    BACKEND                                                     │
-├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                                                 │
-│   ┌─────────────────────────────────────┐   ┌─────────────────────────────────────────────────────────────────┐  │
-│   │                                     │   │                                                                 │  │
-│   │            ROLE CHEF                │   │                         ROLE SERVEUR                            │  │
-│   │                                     │   │                                                                 │  │
-│   │  • Full catalog CRUD                │   │  • Real-time order tracking                                      │  │
-│   │  • Menu & dish management           │   │  • Status mutation                                                │  │
-│   │  • Analytics dashboard              │   │  • Queue management                                              │  │
-│   │  • Data export (Excel/PDF)          │   │  • Customer communication                                        │  │
-│   │  • User administration              │   │  • Table assignment                                              │  │
-│   │  • Complete audit trail             │   │  • Action history                                                │  │
-│   │                                     │   │                                                                 │  │
-│   └─────────────────────────────────────┘   └─────────────────────────────────────────────────────────────────┘  │
-│                                                                                                                 │
-│   ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐   │
-│   │                                                                                                         │   │
-│   │                              🔐 SECURITY LAYER — SPRING SECURITY ACTIVE                                 │   │
-│   │                                                                                                         │   │
-│   │         BCrypt (cost=12) • JWT • Session Management • CSRF Protection • XSS Prevention                 │   │
-│   │                                                                                                         │   │
-│   └─────────────────────────────────────────────────────────────────────────────────────────────────────────┘   │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
+Utilisation du block `json` pour simuler un rapport système coloré (selon les thèmes GitHub) :
 
-<br>
-
----
-
-## ◈ ＳＴＡＣＫ
-
-<br>
+```json
+{
+  "ENGINE": {
+    "core": "Java 17 (JDK)",
+    "framework": "Spring Boot 3.2",
+    "persistence": "Spring Data JPA / MySQL 8.0"
+  },
+  "CYBER_SECURITY": [
+    "Spring Security 6",
+    "BCrypt Hashing",
+    "Session Management",
+    "CSRF / CORS Policies"
+  ],
+  "FRONT_END_UI": {
+    "render": "Thymeleaf 3.1",
+    "styling": "HTML5 / CSS3 / FontAwesome",
+    "logic": "ES6 JavaScript"
+  }
+}
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                  TECHNOLOGIES                                                   │
-├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                                                 │
-│   ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════╗  │
-│   ║                                                                                                         ║  │
-│   ║   BACKEND                                                                                               ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  ☕ Java 17    │  🍃 Spring Boot 3.2    │  🔐 Spring Security 6    │  💾 Spring Data JPA        │   ║  │
-│   ║   │  🗄️ MySQL 8.0  │  ⚡ Redis             │  📦 Maven 3.9            │  🐳 Docker                 │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ║   FRONTEND                                                                                              ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  🎨 Thymeleaf 3.1    │  📐 HTML5/CSS3    │  ⚡ JavaScript ES6    │  🖼️ Font Awesome 6         │   ║  │
-│   ║   │  📄 html2pdf.js      │  📱 Responsive    │  🌙 Dark Mode         │  ✨ Animations             │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ║   DEVOPS                                                                                                ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  🐙 GitHub Actions    │  🐳 Docker Compose    │  ☁️ Cloud Ready    │  📊 Prometheus            │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝  │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
+### ⬡ `[03] BOOT.SEQ` // SÉQUENCE D'AMORÇAGE
+
+```bash
+# 1. Établir la liaison avec le dépôt principal
+git clone [https://github.com/campus-dang/campus-dang-food.git](https://github.com/campus-dang/campus-dang-food.git)
+cd campus-dang-food
+
+# 2. Forger l'environnement de données
+mysql -u root -p -e "CREATE DATABASE campusdangdb"
+
+# 3. Compiler & Exécuter la matrice
+./mvnw clean package
+java -jar target/*.jar
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                 ARBORESCENCE                                                   │
-├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                                                 │
-│   campus-dang-food/                                                                                            │
-│   │                                                                                                             │
-│   ├── 📁 src/main/java/com/campusdang/restauration/                                                            │
-│   │   ├── 📁 config/          → Configuration beans, Security, Data initialization                              │
-│   │   ├── 📁 controller/      → REST endpoints, MVC controllers                                                │
-│   │   ├── 📁 dto/             → Data Transfer Objects                                                          │
-│   │   ├── 📁 exception/       → Global error handling                                                          │
-│   │   ├── 📁 model/           → JPA entities, Enums                                                            │
-│   │   ├── 📁 repository/      → Spring Data JPA interfaces                                                     │
-│   │   ├── 📁 security/        → JWT filters, Authentication providers                                          │
-│   │   └── 📁 service/         → Business logic, Transactional services                                         │
-│   │                                                                                                             │
-│   ├── 📁 src/main/resources/                                                                                   │
-│   │   ├── 📁 static/                                                                                           │
-│   │   │   ├── 📁 css/          → Stylesheets, Design system                                                    │
-│   │   │   ├── 📁 js/           → ES6 modules, Cart logic, API calls                                            │
-│   │   │   └── 📁 assets/       → Images, Fonts                                                                 │
-│   │   ├── 📁 templates/        → Thymeleaf views (layout, fragments)                                           │
-│   │   └── 📄 application.properties                                                                           │
-│   │                                                                                                             │
-│   ├── 📁 src/test/             → Unit tests, Integration tests                                                 │
-│   │                                                                                                             │
-│   └── 📄 pom.xml               → Maven dependencies                                                            │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
+```yaml
+ROOT.ACCESS_CODES:
+  - user: chef@campusdang.cm
+    pass: chef123
+    auth: [CHEF_LEVEL]
 
----
+  - user: serveur@campusdang.cm
+    pass: serveur123
+    auth: [SERVER_LEVEL]
 
-## ◈ ＤＥＰＬＯＹ
-
-<br>
+  - user: jean@email.com
+    pass: 123456
+    auth: [GUEST_LEVEL]
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                              PROCÉDURE D'INSTALLATION                                            │
-├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                                                 │
-│   ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════╗  │
-│   ║   PRÉREQUIS                                                                                              ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  ● JDK 17+        → Java Development Kit                                                         │   ║  │
-│   ║   │  ● MySQL 8.0+     → Database                                                                     │   ║  │
-│   ║   │  ● Maven 3.9+     → Build tool                                                                   │   ║  │
-│   ║   │  ● Git            → Version control                                                              │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ║   INSTALLATION                                                                                          ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  $ git clone https://github.com/campus-dang/campus-dang-food.git                                 │   ║  │
-│   ║   │  $ cd campus-dang-food                                                                           │   ║  │
-│   ║   │  $ mysql -u root -p -e "CREATE DATABASE campusdangdb"                                           │   ║  │
-│   ║   │  $ ./mvnw clean package                                                                          │   ║  │
-│   ║   │  $ java -jar target/campus-dang-food-*.jar                                                       │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ║   ACCÈS INITIAUX                                                                                        ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  ● chef@campusdang.cm / chef123       → Role: CHEF                                              │   ║  │
-│   ║   │  ● serveur@campusdang.cm / serveur123 → Role: SERVEUR                                            │   ║  │
-│   ║   │  ● jean@email.com / 123456            → Role: CLIENT                                             │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝  │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
+### ⬡ `[04] NET.ROUTES` // ENDPOINTS API
 
----
+```text
+ ████████████████████████████████░░░░░░░░ PUBLIC_GRID
 
-## ◈ ＥＮＤＰＯＩＮＴＳ
+ GET    /                              [INIT.HOME]
+ GET    /restaurants                   [FETCH.LIST]
+ GET    /restaurants/{id}              [FETCH.NODE]
+ GET    /restaurants/{id}/menu/{type}  [FETCH.INVENTORY]
+ POST   /reservations                  [PUSH.ALLOCATION]
 
-<br>
+ ████████████████████████████████████████ SECURE_GRID (AUTH REQ.)
+
+ GET    /admin                         [INIT.DASHBOARD]
+ POST   /admin/menus                   [PUSH.MENU]
+ PUT    /admin/menus/{id}              [UPDATE.MENU]
+ DELETE /admin/menus/{id}              [WIPE.MENU]
+ POST   /admin/plats                   [PUSH.ITEM]
+ PUT    /admin/commandes/{id}/statut   [UPDATE.FLOW]
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                    API ROUTES                                                   │
-├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                                                 │
-│   🌐  PUBLIC                                                                                                   │
-│   ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐   │
-│   │  GET  /                              → 200  Homepage                                                     │   │
-│   │  GET  /restaurants                   → 200  Establishments list                                          │   │
-│   │  GET  /restaurants/{id}              → 200  Establishment details                                        │   │
-│   │  GET  /restaurants/{id}/menu/{type}  → 200  Menu by category                                             │   │
-│   │  GET  /reservations/new              → 200  Booking form                                                 │   │
-│   │  POST /reservations                  → 201  Create booking                                               │   │
-│   │  GET  /login                         → 200  Authentication page                                         │   │
-│   │  POST /login                         → 302  Authenticate                                                 │   │
-│   │  GET  /logout                        → 302  Logout                                                       │   │
-│   └─────────────────────────────────────────────────────────────────────────────────────────────────────────┘   │
-│                                                                                                                 │
-│   🔒  PROTECTED (authentication required)                                                                      │
-│   ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐   │
-│   │  GET    /admin                       → 200  Dashboard                                                   │   │
-│   │  GET    /admin/menus/{restoId}       → 200  Menu management                                              │   │
-│   │  POST   /admin/menus                 → 201  Create menu                                                  │   │
-│   │  PUT    /admin/menus/{id}            → 200  Update menu                                                  │   │
-│   │  DELETE /admin/menus/{id}            → 204  Delete menu                                                  │   │
-│   │  POST   /admin/dishes                → 201  Create dish                                                  │   │
-│   │  PUT    /admin/dishes/{id}           → 200  Update dish                                                  │   │
-│   │  DELETE /admin/dishes/{id}           → 204  Delete dish                                                  │   │
-│   │  GET    /admin/orders                → 200  Orders list                                                  │   │
-│   │  PUT    /admin/orders/{id}/status    → 200  Update status                                                │   │
-│   └─────────────────────────────────────────────────────────────────────────────────────────────────────────┘   │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
+### ⬡ `[05] CHRONO.MAP` // HORIZON DES ÉVOLUTIONS
 
----
-
-## ◈ ＲＯＡＤＭＡＰ
-
-<br>
+```diff
++ [OK] Moteur de sécurité Spring Security implémenté
++ [OK] Matrices CRUD (Établissements & Menus) actives
++ [OK] Panier client en LocalStorage déployé
++ [OK] Générateur PDF opérationnel
+! [IN] Pipeline de statut des commandes (En cours d'intégration)
+! [IN] Intégration paiement Orange/MTN (Phase de test API)
+- [WAIT] Application mobile React Native
+- [WAIT] Prédiction d'affluence par Intelligence Artificielle
+- [WAIT] Websockets (Notifications Push temps réel)
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                    VISION                                                       │
-├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                                                 │
-│   ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════╗  │
-│   ║   ✅  ACHIEVED                                                                                          ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  ● Spring Security + JWT implementation                                                         │   ║  │
-│   ║   │  ● Complete CRUD for establishments and menus                                                    │   ║  │
-│   ║   │  ● Client-side cart (LocalStorage)                                                               │   ║  │
-│   ║   │  ● Booking engine with availability verification                                                 │   ║  │
-│   ║   │  ● PDF ticket generator (html2pdf.js)                                                            │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ║   🔄  IN PROGRESS                                                                                       ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  ● Payment API integration (Orange Money / MTN Mobile Money)                                    │   ║  │
-│   ║   │  ● Order status pipeline (Pending → Preparing → Delivered)                                      │   ║  │
-│   ║   │  ● Advanced analytics dashboard                                                                 │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ║   🚀  ROADMAP                                                                                           ║  │
-│   ║   ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐   ║  │
-│   ║   │  ● Mobile application (React Native)                                                             │   ║  │
-│   ║   │  ● Push notifications (WebSockets)                                                                │   ║  │
-│   ║   │  ● Business intelligence module (Excel export)                                                   │   ║  │
-│   ║   │  ● AI integration for traffic prediction                                                          │   ║  │
-│   ║   └─────────────────────────────────────────────────────────────────────────────────────────────────┘   ║  │
-│   ║                                                                                                         ║  │
-│   ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════╝  │
-│                                                                                                                 │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
-<br>
-
----
-
-<br>
-
-<div align="center">
+```text
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║   [ ✉ contact@campusdang.cm ]                   [ 🌐 campusdang.cm ]         ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 
 ```
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-```
 
-<br>
-<br>
+`// END_OF_TRANSMISSION`
 
-| **CONTACT** | **WEBSITE** | **DOCS** | **DISCORD** |
-|:---:|:---:|:---:|:---:|
-| contact@campusdang.cm | campusdang.cm | docs.campusdang.cm | discord.gg/campusdang |
+### Pourquoi c'est "Ultra Futuriste" :
 
-<br>
-
-```
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-```
-
-<br>
-
-**✧ ＣＡＭＥＲＯＵＮ — ＮＧＡＯＵＮＤéＲé — ２０２６ ✧**
-
-<br>
-
-```
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-```
-
-</div>
-
-<br>
-<br>
-<br>
+1. **Logo Typographique Personnalisé :** L'en-tête utilise une police ASCII lourde (type "Cyber") couplée à un séparateur en damier `▀▄▀▄`.
+2. **Métriques Fictives (HUD) :** L'ajout des coordonnées GPS réelles de Ngaoundéré et des statuts `SYS.LOC`, `NET.STAT` donne l'impression d'un écran de contrôle industriel ou militaire.
+3. **Exploitation des formats de code :** L'utilisation de blocs `yaml`, `json` et `diff` permet d'obtenir des colorations syntaxiques automatiques sur GitHub (le block `diff` affiche du texte vert pour les `+`, jaune/orange pour les `!`, et rouge pour les `-`, créant une barre de progression naturelle).
+4. **Structure "Arbre" :** L'utilisation des caractères `├─` et `└─` transforme une simple liste à puces en un schéma d'architecture système.
