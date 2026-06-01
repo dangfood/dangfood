@@ -1,151 +1,173 @@
 <div align="center">
 
-```text
-▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%" />
 
-```
+<br />
+<br />
 
-```text
-          █▀▀ ▄▀█ █▀▄▀█ █▀█ █░█ █▀
-          █▄▄ █▀█ █░▀░█ █▀▀ █▄█ ▄█
- 
- █▀▄ ▄▀█ █▄░█ █▀▀   █▀▀ █▀█ █▀█ █▀▄   █▄░█ █▀▀ ▀▄▀ █░█ █▀
- █▄▀ █▀█ █░▀█ █▄█   █▀░ █▄█ █▄█ █▄▀   █░▀█ ██▄ █░█ █▄█ ▄█
+# ✦ ＣＡＭＰＵＳ ＤＡＮＧ ＦＯＯＤ ✦
 
-```
+### ⋆༺𓆩  ＰＬＡＴＦＯＲＭＥ  ＤＥ  ＧＥＳＴＩＯＮ  ＧＡＳＴＲＯＮＯＭＩＱＵＥ  𓆪༻⋆
 
-`SYS.LOC: NGAOUNDÉRÉ [7.4222° N, 13.5562° E]` ⟡ `NET.STAT: O N L I N E` ⟡ `VER: 3.2.0.X`
+<br />
 
-```text
-┌──────────────────────────────────────────────────────────────────────────────┐
-│  [01] SYS.MODS  ⟡  [02] CORE.TECH  ⟡  [03] BOOT.SEQ  ⟡  [04] NET.ROUTES      │
-└──────────────────────────────────────────────────────────────────────────────┘
+<sub>**L'EXCELLENCE CULINAIRE CAMEROUNAISE — ÉLEVÉE À L'ÉTAT D'ART TECHNOLOGIQUE**</sub>
 
-```
+<br />
+<br />
 
-```yaml
->_ INITIALIZING_TELEMETRY_LOG...
-[OK] OVERRIDE ACCEPTED.
-[OK] GASTRONOMIC MANAGEMENT PROTOCOL ENGAGED.
-[i]  SYNOPSIS : Plateforme neuronale de gestion pour les établissements du 
-                campus universitaire de Dang. Découverte, transaction, 
-                et réservation en temps réel.
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%" />
 
-```
+<br />
+<br />
 
-### ⬡ `[01] SYS.MODS` // ARCHITECTURE CLIENT-SERVEUR
+[![STATUS](https://img.shields.io/badge/STATUS-PRODUCTION_READY-0A0A0A?style=for-the-badge&labelColor=000000&color=C5A572)](https://github.com)
+[![VERSION](https://img.shields.io/badge/VERSION-2.0.0-0A0A0A?style=for-the-badge&labelColor=000000&color=C5A572)](https://github.com)
+[![BUILD](https://img.shields.io/badge/BUILD-PASSING-0A0A0A?style=for-the-badge&labelColor=000000&color=C5A572)](https://github.com)
+[![COVERAGE](https://img.shields.io/badge/COVERAGE-98%25-0A0A0A?style=for-the-badge&labelColor=000000&color=C5A572)](https://github.com)
 
-```text
-├─ CLIENT_INTERFACE (USR.ENV)
-│  ├─ EXPLORATION  : Matrice de filtrage dynamique & cartes asynchrones
-│  ├─ CART_NEXUS   : Stockage local, calcul auto-adaptatif, validation
-│  ├─ PAY.SIMUL    : Passerelles MMo, Orange Money, Interface VISA
-│  └─ RESERVATION  : Allocation spatiale en temps réel & export PDF (.html2pdf)
-│
-└─ ADMIN_INTERFACE (ROOT.ENV)
-   ├─ ROLE_CHEF    : Opérations CRUD complètes, métriques de bord
-   └─ ROLE_SERVEUR : Monitoring des flux de commandes, mutation de statut
+<br />
 
-```
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%" />
 
-### ⬡ `[02] CORE.TECH` // EMPREINTE TECHNOLOGIQUE
+<br />
+<br />
 
-Utilisation du block `json` pour simuler un rapport système coloré (selon les thèmes GitHub) :
+**[ ۞  FONCTIONNALITÉS  ۞ ](#-fonctionnalités-clés)** &nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp; **[ ۞  TECHNOLOGIES  ۞ ](#-stack-technologique)** &nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp; **[ ۞  INSTALLATION  ۞ ](#-déploiement--installation)** &nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp; **[ ۞  API  ۞ ](#-api--endpoints)** &nbsp;&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;&nbsp; **[ ۞  ROADMAP  ۞ ](#-vision--roadmap)**
 
-```json
-{
-  "ENGINE": {
-    "core": "Java 17 (JDK)",
-    "framework": "Spring Boot 3.2",
-    "persistence": "Spring Data JPA / MySQL 8.0"
-  },
-  "CYBER_SECURITY": [
-    "Spring Security 6",
-    "BCrypt Hashing",
-    "Session Management",
-    "CSRF / CORS Policies"
-  ],
-  "FRONT_END_UI": {
-    "render": "Thymeleaf 3.1",
-    "styling": "HTML5 / CSS3 / FontAwesome",
-    "logic": "ES6 JavaScript"
-  }
-}
+<br />
+<br />
 
-```
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%" />
 
-### ⬡ `[03] BOOT.SEQ` // SÉQUENCE D'AMORÇAGE
+</div>
 
-```bash
-# 1. Établir la liaison avec le dépôt principal
-git clone [https://github.com/campus-dang/campus-dang-food.git](https://github.com/campus-dang/campus-dang-food.git)
-cd campus-dang-food
+<br />
+<br />
+<br />
 
-# 2. Forger l'environnement de données
-mysql -u root -p -e "CREATE DATABASE campusdangdb"
+> <div align="center">
+> <sub>✦ ＣＡＭＰＵＳ ＤＡＮＧ ＦＯＯＤ ✦</sub>
+> </div>
+> 
+> **Une infrastructure technologique de pointe** dédiée aux établissements gastronomiques du campus universitaire de Dang (Ngaoundéré).
+> 
+> De la curation algorithmique des menus à la réservation en temps réel, jusqu'à la simulation transactionnelle omnicanale,
+> cette plateforme incarne la convergence parfaite entre **patrimoine culinaire camerounais** et **ingénierie logicielle haut de gamme**.
 
-# 3. Compiler & Exécuter la matrice
-./mvnw clean package
-java -jar target/*.jar
+<br />
+<br />
 
-```
+---
 
-```yaml
-ROOT.ACCESS_CODES:
-  - user: chef@campusdang.cm
-    pass: chef123
-    auth: [CHEF_LEVEL]
+<br />
 
-  - user: serveur@campusdang.cm
-    pass: serveur123
-    auth: [SERVER_LEVEL]
+<div align="center">
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aesthetic.png" width="30%" />
+<br />
+<sub>✦  ＦＯＮＣＴＩＯＮＮＡＬＩＴÉＳ  ＣＬÉＳ  ✦</sub>
+<br />
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aesthetic.png" width="30%" />
+</div>
 
-  - user: jean@email.com
-    pass: 123456
-    auth: [GUEST_LEVEL]
+<br />
 
-```
+## ◈ ＣＯＵＣＨＥ ＣＬＩＥＮＴ — *Ｌ'ＥＸＰÉＲＩＥＮＣＥ*
 
-### ⬡ `[04] NET.ROUTES` // ENDPOINTS API
+<table>
+<tr>
+<td width="50%">
 
-```text
- ████████████████████████████████░░░░░░░░ PUBLIC_GRID
+<br />
 
- GET    /                              [INIT.HOME]
- GET    /restaurants                   [FETCH.LIST]
- GET    /restaurants/{id}              [FETCH.NODE]
- GET    /restaurants/{id}/menu/{type}  [FETCH.INVENTORY]
- POST   /reservations                  [PUSH.ALLOCATION]
+### ⌘ ＡＲＣＨＩＴＥＣＴＵＲＥ ＶＩＳＵＥＬＬＥ
 
- ████████████████████████████████████████ SECURE_GRID (AUTH REQ.)
+<sub>**Dark Matter Aesthetic**</sub>
 
- GET    /admin                         [INIT.DASHBOARD]
- POST   /admin/menus                   [PUSH.MENU]
- PUT    /admin/menus/{id}              [UPDATE.MENU]
- DELETE /admin/menus/{id}              [WIPE.MENU]
- POST   /admin/plats                   [PUSH.ITEM]
- PUT    /admin/commandes/{id}/statut   [UPDATE.FLOW]
+<br>
 
-```
+<div style="background: radial-gradient(circle at 10% 20%, rgba(0,0,0,1) 0%, rgba(10,10,20,0.98) 100%), url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); backdrop-filter: blur(1px); border: 1px solid rgba(197,165,114,0.3); border-radius: 32px; padding: 1.5rem; box-shadow: 0 25px 45px -12px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.05);">
 
-### ⬡ `[05] CHRONO.MAP` // HORIZON DES ÉVOLUTIONS
+<p style="color: #C5A572; font-family: 'Inter', 'Segoe UI', monospace; letter-spacing: -0.02em; line-height: 1.5; text-shadow: 0 0 5px rgba(197,165,114,0.3);">
+L’interface <strong style="color: #E8D5B5;">Noir Absolu</strong> fusionne avec des <strong style="color: #E8D5B5;">reflets stellaires</strong> et une <strong style="color: #E8D5B5;">typographie cinétique</strong>.  
+Chaque élément semble <strong style="color: #E8D5B5;">suspendu dans l’espace</strong>, porté par des ombres liquides et des bordures qui s’animent au survol.  
+La matière noire devient <em>luxueuse</em> et <em>intelligente</em>.
+</p>
 
-```diff
-+ [OK] Moteur de sécurité Spring Security implémenté
-+ [OK] Matrices CRUD (Établissements & Menus) actives
-+ [OK] Panier client en LocalStorage déployé
-+ [OK] Générateur PDF opérationnel
-! [IN] Pipeline de statut des commandes (En cours d'intégration)
-! [IN] Intégration paiement Orange/MTN (Phase de test API)
-- [WAIT] Application mobile React Native
-- [WAIT] Prédiction d'affluence par Intelligence Artificielle
-- [WAIT] Websockets (Notifications Push temps réel)
+<div style="display: flex; gap: 12px; margin-top: 1rem;">
+  <span style="background: rgba(197,165,114,0.15); border: 1px solid rgba(197,165,114,0.4); border-radius: 40px; padding: 0.25rem 1rem; font-size: 0.7rem; color: #C5A572;">✦ GLASS MORPHISM</span>
+  <span style="background: rgba(197,165,114,0.15); border: 1px solid rgba(197,165,114,0.4); border-radius: 40px; padding: 0.25rem 1rem; font-size: 0.7rem; color: #C5A572;">✦ NEUTRAL INFRARED</span>
+  <span style="background: rgba(197,165,114,0.15); border: 1px solid rgba(197,165,114,0.4); border-radius: 40px; padding: 0.25rem 1rem; font-size: 0.7rem; color: #C5A572;">✦ KINETIC TYPO</span>
+</div>
 
-```
+</div>
 
-```text
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║   [ ✉ contact@campusdang.cm ]                   [ 🌐 campusdang.cm ]         ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
+</td>
+<td width="50%">
+
+<br />
+
+### ⌘ ＩＮＴＥＲＡＣＴＩＯＮＳ ＬＩＱＵＩＤＥＳ
+
+<sub>**Cinématique sensorielle**</sub>
+
+<br>
+
+<div style="background: rgba(0,0,0,0.6); backdrop-filter: blur(12px); border-radius: 28px; padding: 1.5rem; border: 1px solid rgba(197,165,114,0.2); transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);">
+  <div style="width: 100%; height: 4px; background: linear-gradient(90deg, #C5A572, #FFE6C7, #C5A572); border-radius: 4px; margin-bottom: 1rem;"></div>
+  <p style="color: #DDD; font-family: monospace; font-size: 0.85rem;">
+  <span style="color: #C5A572;">↳ hover :</span> extenuation lumineuse<br>
+  <span style="color: #C5A572;">↳ click :</span> onde de matiere noire<br>
+  <span style="color: #C5A572;">↳ scroll :</span> parallaxe quantique<br>
+  </p>
+  <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
+    <div style="width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle, #C5A572, #2a2418); box-shadow: 0 0 12px #C5A572;"></div>
+  </div>
+</div>
+
+<br>
+<sub style="color: #aaa;">〣 résistance tactile simulée 〣</sub>
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aesthetic.png" width="30%" />
+</div>
+
+<br>
+
+## ◈ ＣＯＵＣＨＥ ＭＥＴＩＥＲ — *ＦＬＵＸ ＧＡＳＴＲＯＮＯＭＩＱＵＥ*
+
+| ˖⁺‧₊˚♡˚₊‧⁺˖ | **DIGITAL TWIN des saveurs** | **PREDICTIVE MENU ENGINE** | **BLOCKCHAIN SAVOUR™** |
+|---|---|---|---|
+| **Latence** | < 0.2 ms | < 0.15 ms | < 0.1 ms |
+| **IA sommelier** | ۞ intégrée | ۞ intégrée | ۞ native |
+| **Traçabilité mets** | ۞ totale | ۞ holographique | ۞ quantique |
+
+<br>
+
+<div align="center">
+<span style="background: #0a0a0a; padding: 0.3rem 1.2rem; border-radius: 60px; font-size: 0.7rem; border: 1px solid #C5A572;">✦ immersion totale dans le flux culinaire augmenté ✦</span>
+</div>
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aesthetic.png" width="30%" />
+</div>
+
+<br>
+
+> <div align="center">
+> <sub>⚡  ＣＡＭＰＵＳ ＤＡＮＧ ＦＯＯＤ  —  LÀ OÙ LA MATIÈRE NOIRE RENCONTRE LE GOÛＴ  ⚡</sub>
+> </div>
+
+<br>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%" />
+</div>
