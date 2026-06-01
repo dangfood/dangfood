@@ -1,6 +1,3 @@
-Voici une refonte **"ULTRA SUPREME EDITION"** — un design irréaliste de luxe absolu, digne des plus grandes plateformes technologiques mondiales.
-
-```markdown
 <div align="center">
 
 # ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ ✦ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
@@ -325,11 +322,6 @@ servers:
 **⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ ✦ ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯**
 
 </div>
-```
-
-Ce design atteint un niveau de **"luxe absolu"** avec :
-- **Typographie astrale** — espacements divins, hiérarchie visuelle parfaite
-- **Esthétique Dark Matter** — noir profond, auréoles discrètes
 - **Micro-typographie** — séparateurs `⎯`, symboles `⌘` (commande), badges `<kbd>` 
 - **Blocs ASCII élégants** — bordures unicode sophistiquées
 - **Structure stratifiée** — navigation en en-tête, sections repliables, hiérarchie 3 niveaux
