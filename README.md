@@ -1,10 +1,3 @@
-C'est une demande exceptionnelle. Pour atteindre un niveau **"Ultra Futuriste / Jamais Réalisé"**, nous devons abandonner l'idée d'un simple document texte. Nous allons transformer votre fichier `README.md` en une **Interface Homme-Machine (HUD) d'inspiration Cyberpunk**.
-
-L'astuce consiste à utiliser les caractères de dessin de boîtes Unicode (`┌`, `├`, `│`), des blocs de remplissage (`█`, `▓`, `▒`), et le formatage de code (`yaml`, `bash`) pour tromper le moteur Markdown et créer l'illusion d'un terminal holographique actif, directement sur GitHub.
-
-Voici l'architecture **NEXUS** de votre projet. Copiez ce code brut :
-
-```markdown
 <div align="center">
 
 ```text
@@ -156,14 +149,3 @@ ROOT.ACCESS_CODES:
 ║   [ ✉ contact@campusdang.cm ]                   [ 🌐 campusdang.cm ]         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
-
-```
-
-`// END_OF_TRANSMISSION`
-
-### Pourquoi c'est "Ultra Futuriste" :
-
-1. **Logo Typographique Personnalisé :** L'en-tête utilise une police ASCII lourde (type "Cyber") couplée à un séparateur en damier `▀▄▀▄`.
-2. **Métriques Fictives (HUD) :** L'ajout des coordonnées GPS réelles de Ngaoundéré et des statuts `SYS.LOC`, `NET.STAT` donne l'impression d'un écran de contrôle industriel ou militaire.
-3. **Exploitation des formats de code :** L'utilisation de blocs `yaml`, `json` et `diff` permet d'obtenir des colorations syntaxiques automatiques sur GitHub (le block `diff` affiche du texte vert pour les `+`, jaune/orange pour les `!`, et rouge pour les `-`, créant une barre de progression naturelle).
-4. **Structure "Arbre" :** L'utilisation des caractères `├─` et `└─` transforme une simple liste à puces en un schéma d'architecture système.
