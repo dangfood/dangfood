@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Dang Food - Découvrez tous nos restaurants gastronomiques">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Nos Restaurants • Campus Dang Food</title>
+    
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #0f0f0f;
+            --bg-card: #141414;
+            --bg-elevated: #1a1a1a;
+            
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.5);
+            
+            --gold-primary: #d4af37;
+            --gold-light: #e8c547;
+            --gold-dark: #b8962c;
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            
+            --border-light: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(212, 175, 55, 0.3);
+            
+            --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 40px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background Animation */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(ellipse at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 70%, rgba(184, 115, 51, 0.05) 0%, transparent 50%);
+        }
+
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .bg-orbs {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.06;
+            animation: floatOrb 30s ease-in-out infinite;
+        }
+        
+        .orb--1 {
+            width: 70vw;
+            height: 70vw;
+            background: radial-gradient(circle, var(--gold-primary), transparent);
+            top: -20%;
+            right: -15%;
+        }
+        
+        .orb--2 {
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, #b87333, transparent);
+            bottom: -20%;
+            left: -10%;
+            animation-delay: -15s;
+        }
+
+        @keyframes floatOrb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -40px) scale(1.05); }
+            66% { transform: translate(-30px, 30px) scale(0.95); }
+        }
+
+        .grid-pattern {
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+            z-index: -1;
+            pointer-events: none;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 0;
+            transition: all 0.4s var(--transition-smooth);
+        }
+        
+        .header.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--bg-primary);
+            transition: transform 0.3s var(--transition-bounce);
+        }
+        
+        .logo:hover .logo-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, white, var(--gold-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            padding: 10px 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border-radius: var(--radius-sm);
+            position: relative;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gold-primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::before {
+            width: 30px;
+        }
+        
+        .nav-link:hover {
+            color: white;
+        }
+        
+        .nav-link.active {
+            color: var(--gold-primary);
+        }
+        
+        .nav-link.active::before {
+            width: 30px;
+            background: var(--gold-primary);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mobile-toggle:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background: var(--bg-secondary);
+            z-index: 1000;
+            transition: right 0.4s var(--transition-smooth);
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            border-left: 1px solid var(--border-gold);
+        }
+        
+        .mobile-menu.open {
+            right: 0;
+        }
+        
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .mobile-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .mobile-close:hover {
+            transform: rotate(90deg);
+            color: var(--gold-primary);
+        }
+        
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .mobile-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 10px 0;
+        }
+        
+        .mobile-nav a:hover,
+        .mobile-nav a.active {
+            color: var(--gold-primary);
+            transform: translateX(10px);
+        }
+        
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+        }
+        
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+            padding: 6px 16px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 60px;
+        }
+        
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .page-subtitle {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            border-radius: 60px;
+            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--border-gold);
+            color: var(--gold-primary);
+        }
+        
+        .filter-btn.active {
+            border-color: var(--gold-primary);
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-primary);
+        }
+
+        /* Restaurants Grid */
+        .restaurants-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding-bottom: 60px;
+        }
+        
+        .resto-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.4s var(--transition-smooth);
+            position: relative;
+        }
+        
+        .resto-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-gold);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .resto-card .card-img {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(184, 115, 51, 0.2));
+            padding: 45px;
+            text-align: center;
+            font-size: 4.5rem;
+            position: relative;
+            transition: all 0.4s;
+        }
+        
+        .resto-card:hover .card-img {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(184, 115, 51, 0.3));
+        }
+        
+        .resto-card .card-img .emoji {
+            transition: transform 0.4s var(--transition-bounce);
+            display: inline-block;
+        }
+        
+        .resto-card:hover .card-img .emoji {
+            transform: scale(1.15) rotate(-5deg);
+        }
+        
+        .resto-card .status-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #22c55e;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .status-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        
+        .resto-card .note-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--border-gold);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+        }
+        
+        .resto-card .card-body {
+            padding: 25px;
+        }
+        
+        .resto-card .card-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .resto-card .card-body .type-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-primary);
+            padding: 4px 14px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .resto-card .card-body .info {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .resto-card .card-body .info i {
+            color: var(--gold-primary);
+            width: 16px;
+            font-size: 0.8rem;
+        }
+        
+        .resto-card .btn-voir {
+            display: block;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: var(--bg-primary);
+            text-align: center;
+            padding: 14px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 18px;
+            transition: all 0.3s;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .resto-card .btn-voir:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+            color: var(--bg-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-light);
+            padding: 50px 0 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+        
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        
+        .footer-text span {
+            color: var(--gold-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .restaurants-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            .filters {
+                gap: 8px;
+            }
+            .filter-btn {
+                padding: 8px 18px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .restaurants-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-title {
+                font-size: 1.8rem;
+            }
+            .main-content {
+                padding-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+    <canvas class="bg-particles" id="particleCanvas"></canvas>
+    <div class="bg-orbs">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+    </div>
+    <div class="grid-pattern"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <div class="logo-icon"><i class="fas fa-utensils"></i></div>
+                <span class="logo-text">Campus Dang</span>
+            </a>
+            <nav class="nav">
+                <a href="/" class="nav-link">Accueil</a>
+                <a href="/restaurants" class="nav-link active">Restaurants</a>
+                <a href="/reservations/nouvelle" class="nav-link">Réserver</a>
+                <a href="/contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;">Menu</span>
+            <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-nav">
+            <a href="/">Accueil</a>
+            <a href="/restaurants" class="active">Restaurants</a>
+            <a href="/reservations/nouvelle">Réserver</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-tag">Gastronomie</div>
+                <h1 class="page-title">🏪 Nos Restaurants</h1>
+                <p class="page-subtitle">Découvrez les meilleurs restaurants autour du campus</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterRestos('all')">🍽️ Tous</button>
+                <button class="filter-btn" onclick="filterRestos('GRILLADE')">🥩 Grillades</button>
+                <button class="filter-btn" onclick="filterRestos('RESTAURANT')">🍽️ Restaurants</button>
+                <button class="filter-btn" onclick="filterRestos('BAR')">🍺 Bars</button>
+            </div>
+            
+            <!-- Restaurants Grid -->
+            <div class="restaurants-grid" id="restaurantsGrid">
+                <div th:each="restaurant : ${restaurants}" class="resto-card" th:attr="data-type=${restaurant.typeService.name()}">
+                    <div class="card-img">
+                        <span class="emoji" th:text="${restaurant.typeService.emoji}">🍽️</span>
+                        <span class="status-badge">
+                            <span class="dot"></span> Ouvert
+                        </span>
+                        <span class="note-badge">
+                            ⭐ <span th:text="${restaurant.note}">4.5</span>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <h3 th:text="${restaurant.nom}">Nom du restaurant</h3>
+                        <span class="type-badge" th:text="${restaurant.typeService.libelle}">Type</span>
+                        <p class="info">
+                            <i class="fas fa-star"></i>
+                            <span th:text="${restaurant.nombreAvis}">0</span> avis
+                        </p>
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span th:text="${restaurant.adresse}">Adresse</span>
+                        </p>
+                        <p class="info">
+                            <i class="fas fa-clock"></i>
+                            <span th:text="${restaurant.horairesOuverture}">Horaires</span>
+                        </p>
+                        <p class="info">
+                            <i class="fas fa-medal"></i>
+                            Spécialité : <span th:text="${restaurant.specialite}">Spécialité</span>
+                        </p>
+                        <a th:href="@{/restaurants/{id}(id=${restaurant.id})}" class="btn-voir">
+                            <i class="fas fa-arrow-right"></i> Voir le menu et commander
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Campus Dang Food</div>
+                <div class="footer-text">© 2026 <span>Campus Dang Food</span> - L'excellence gastronomique au Cameroun</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Particles Canvas
+        const canvas = document.getElementById('particleCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const PARTICLE_COUNT = 25;
+            let mouse = { x: -1000, y: -1000 };
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            document.addEventListener('mousemove', (e) => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 0.5;
+                    this.speedX = (Math.random() - 0.5) * 0.2;
+                    this.speedY = (Math.random() - 0.5) * 0.2;
+                    this.opacity = Math.random() * 0.3;
+                }
+                
+                update() {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < 100) {
+                        const angle = Math.atan2(dy, dx);
+                        const force = (100 - dist) / 100;
+                        this.speedX -= Math.cos(angle) * force * 0.02;
+                        this.speedY -= Math.sin(angle) * force * 0.02;
+                    }
+                    
+                    this.speedX *= 0.99;
+                    this.speedY *= 0.99;
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    
+                    if (this.x < 0) this.x = canvas.width;
+                    if (this.x > canvas.width) this.x = 0;
+                    if (this.y < 0) this.y = canvas.height;
+                    if (this.y > canvas.height) this.y = 0;
+                }
+                
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                particles = [];
+                for (let i = 0; i < PARTICLE_COUNT; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function animate() {
+                if (!ctx) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                
+                requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                init();
+            });
+            
+            resizeCanvas();
+            init();
+            animate();
+        }
+
+        // Header Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const mobileClose = document.getElementById('mobileClose');
+
+        if (mobileToggle && mobileMenu && menuOverlay && mobileClose) {
+            mobileToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('open');
+                menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            const closeMenu = () => {
+                mobileMenu.classList.remove('open');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+            
+            mobileClose.addEventListener('click', closeMenu);
+            menuOverlay.addEventListener('click', closeMenu);
+        }
+
+        // Filter Function
+        function filterRestos(type) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.querySelectorAll('.resto-card').forEach(card => {
+                if (type === 'all' || card.getAttribute('data-type') === type) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.4s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
